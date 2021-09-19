@@ -12,6 +12,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("MainActivity", "Happy Birthday to Bandit");
-        // Log.e("ERROR", "Sorry for the Belated Happy Birthday!");
+        triggerException();
+    }
+
+    private void triggerException() {
+        try{
+            throw new Exception();
+        } catch(Exception e) {
+            Log.e("Too Late Exception", "Happy belated Birthday!");
+        }
     }
 }
